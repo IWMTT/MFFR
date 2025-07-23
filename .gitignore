@@ -97,3 +97,19 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+
+# uv packages
+/[Aa]ssets/*/.venv/
+
+# Python cache and virtual environment files
+**/__pycache__/
+**/*.py[cod]
+**/*.pyo
+**/.venv/
+**/.mypy_cache/
+**/.pytest_cache/
+**/.coverage
+**/.tox/
+**/.env
+**/.vscode/
