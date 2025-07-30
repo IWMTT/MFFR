@@ -215,10 +215,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointCount: 20
-  R: 5.25
-  a: 5.82
-  kappa: 2.28
-  delta: 0.5
+  R: 6.2
+  a: 2
+  kappa: 1.7
+  delta: 0.33
 --- !u!4 &134089856
 Transform:
   m_ObjectHideFlags: 0
