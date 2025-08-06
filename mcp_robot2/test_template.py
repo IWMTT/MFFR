@@ -1,0 +1,3 @@
+import template_snake_transporter
+
+template_snake_transporter.template_of_snake_robot()

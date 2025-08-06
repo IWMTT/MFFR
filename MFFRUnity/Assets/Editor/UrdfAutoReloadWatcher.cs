@@ -57,7 +57,7 @@ public static class UrdfAutoReloadWatcher
         //string fullPath = Path.GetFullPath(urdfPath);
         //ImportRobotFromUrdf(fullPath);
         Debug.Log("Reloading URDF model...");
-        string assetPath = "Assets/TemporaryRobotDescription/test_robot.urdf";
+        string assetPath = "Assets/TemporaryRobotDescription/temporary_robot.urdf";
         //await Task.Delay(3000);
 
         if (Path.GetExtension(assetPath)?.ToLower() == ".urdf") //‚±‚±‚É‚Í“ü‚Á‚Ä‚¢‚é

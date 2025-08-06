@@ -47,18 +47,19 @@ class Link:
             raise ValueError("geometry_rpy must be a 3-element numpy array.")
         print("Link validation passed.")
 
-    def gen_mesh_file(self, filename: str=None):
+    def gen_mesh_file(self, filename: str=None, targetdir: str=".") -> None:
         """Generate a mesh file for the link."""
 
+        targetdir = targetdir.rstrip("/")
         if self.link_geometry is None:
             # print("Link geometry is not defined. Skipped.")
             return
         if filename is None:
-            filename = f"mesh/{self.link_name}.stl"
+            filename = f"{targetdir}/mesh/{self.link_name}.stl"
             # if there is no directory, create it
             os.makedirs(os.path.dirname(filename), exist_ok=True)
             cq.exporters.export(self.link_geometry, filename)
-            self.filename = filename
+            self.filename = f"mesh/{self.link_name}.stl"
             # print(f"Mesh file generated: {filename}")
         # else:
         #     print(f"Mesh file already exists: {filename}. Skipped.")

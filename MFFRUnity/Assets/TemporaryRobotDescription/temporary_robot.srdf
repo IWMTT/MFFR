@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<robot name="test_robot">
+	<group name="arm">
+		<joint name="world_joint">
+		<joint name="joint_01">
+		<joint name="joint_02">
+		<joint name="joint_03">
+		<joint name="joint_04">
+		<joint name="joint_05">
+		<joint name="joint_06">
+		<joint name="joint_07">
+		<joint name="joint_08">
+		<joint name="joint_09">
+		<joint name="joint_10">
+	</group>
+	<end_effector name="eef" parent_link="link_10" group="arm"/>
+	<virtual_joint name="virtual_joint" type="fixed" parent_frame="world" child_link="base_link"/>
+	<disable_collisions link1="base_rail_link" link2="link_01" reason="Adjacent"/>
+	<disable_collisions link1="link_01" link2="link_02" reason="Adjacent"/>
+	<disable_collisions link1="link_02" link2="link_03" reason="Adjacent"/>
+	<disable_collisions link1="link_03" link2="link_04" reason="Adjacent"/>
+	<disable_collisions link1="link_04" link2="link_05" reason="Adjacent"/>
+	<disable_collisions link1="link_05" link2="link_06" reason="Adjacent"/>
+	<disable_collisions link1="link_06" link2="link_07" reason="Adjacent"/>
+	<disable_collisions link1="link_07" link2="link_08" reason="Adjacent"/>
+	<disable_collisions link1="link_08" link2="link_09" reason="Adjacent"/>
+	<disable_collisions link1="link_09" link2="link_10" reason="Adjacent"/>
+</robot>
