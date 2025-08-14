@@ -4,7 +4,7 @@ from cadquery.vis import show
 from cadquery import Workplane
 import math
 # 頂点ファイルのパス
-file_path = "../Torus/torus_parameter.txt"  # ここを書き換えてください
+file_path = "../MFFRUnity/Assets/Torus/torus_parameter.txt"  # ここを書き換えてください
 
 # ファイルから x, z の頂点を読み込む
 points = []

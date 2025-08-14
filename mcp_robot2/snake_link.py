@@ -14,17 +14,6 @@ mcp = FastMCP("mcp_robot2")
 from link_and_joint_class import *
 
 
-class JointType(Enum):
-    revolute = "revolute"
-    continuous = "continuous"
-    prismatic = "prismatic"
-    fixed = "fixed"
-    floating = "floating"
-    planar = "planar"
-    UNKNOWN = "unknown"
-
-
-
 
 def make_d_shape(diameter: float, height: float) -> cq.Workplane:
     # 半円と、直径部分の長方形を組み合わせてD字型を作成

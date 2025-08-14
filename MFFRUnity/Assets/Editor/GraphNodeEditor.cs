@@ -1,127 +1,182 @@
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.UIElements;
+using System.IO;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using Assimp;
 
-[CustomEditor(typeof(GraphNode))]
+
+[CustomEditor(typeof(TorusSectionController))]
 public class GraphNodeEditor : Editor
 {
+    private GraphEditorView view;
+    private Vector2[] innerPointsToSave;
+    private Vector2[] outerPointsToSave;
+    private Vector2[] normalsToSave;
+    private Vector2[] midpointsToSave;
+
+
+
     public override void OnInspectorGUI()
     {
-        DrawDefaultInspector(); // pointCount, R, a, kappa, delta
+        DrawDefaultInspector();
+        TorusSectionController node = (TorusSectionController)target;
 
-        GraphNode node = (GraphNode)target;
-        Vector2[] points = node.GetApproximatedPoints();
-        if (points == null || points.Length < 2) return;
 
-        Rect graphRect = GUILayoutUtility.GetRect(300, 300);
-        EditorGUI.DrawRect(graphRect, new Color(0.1f, 0.1f, 0.1f));
 
-        // �f�[�^�͈͎擾
-        float minX = float.MaxValue, maxX = float.MinValue;
-        float minZ = float.MaxValue, maxZ = float.MinValue;
-        foreach (var p in points)
-        {
-            if (p.x < minX) minX = p.x;
-            if (p.x > maxX) maxX = p.x;
-            if (p.y < minZ) minZ = p.y;
-            if (p.y > maxZ) maxZ = p.y;
-        }
+        Vector2[] inner = node.GetApproximatedPoints();
+        Vector2[] outer = node.GetOffsetPoints(inner, node.Thickness);
+        if (inner == null || inner.Length < 2) return;
 
-        Vector2 dataCenter = new Vector2((minX + maxX) / 2f, (minZ + maxZ) / 2f);
-        float rangeX = maxX - minX;
-        float rangeZ = maxZ - minZ;
-
-        float margin = 1.2f; // 20% margin
-        float scale = Mathf.Min(graphRect.width / (rangeX * margin), graphRect.height / (rangeZ * margin));
-        Vector2 viewCenter = graphRect.center;
+        Rect rect = GUILayoutUtility.GetRect(300, 300);
+        view = new GraphEditorView(rect, node.R_major, node.A_minor);
 
         Handles.BeginGUI();
+        view.DrawBackground();
+        view.DrawAxisWithTicks(node.R_major, node.A_minor);
 
-        // ���W�� + �ڐ���
-        DrawAxisWithTicks(viewCenter, dataCenter, scale, graphRect);
+        // トーラス断面（線のみ）
+        view.DrawPolyline(inner.ToList(), Color.cyan);
+        view.DrawPolyline(outer.ToList(), new Color(0.5f, 1f, 1f));
 
-        // ���E�_�`��
-        Handles.color = Color.cyan;
-        for (int i = 0; i < points.Length; i++)
+        // オレンジ線構成点
+        float xL = node.R_major - 2 * node.A_minor;
+        float xR = node.R_major + 2 * node.A_minor;
+        Vector2 pL = new Vector2(0, node.InnerHeight);
+        Vector2 pR = new Vector2(node.R_major * 10f, node.OuterHeight);
+
+        Vector2? intersectP1 = IntersectionUtils.GetClosestIntersection(inner, pL, new Vector2(xR, node.InnerHeight), xL);
+        Vector2? intersectP2 = IntersectionUtils.GetClosestIntersection(inner, new Vector2(xL, node.OuterHeight), pR, xR);
+
+        if (intersectP1.HasValue && intersectP2.HasValue)
         {
-            Vector2 p1 = viewCenter + (points[i] - dataCenter) * scale;
-            Vector2 p2 = viewCenter + (points[(i + 1) % points.Length] - dataCenter) * scale;
-            Handles.DrawLine(p1, p2);
-            Handles.DrawSolidDisc(p1, Vector3.forward, 3f);
+            Vector2[] orangeLine = new Vector2[] { pL, intersectP1.Value, intersectP2.Value, pR };
+            view.DrawPolyline(orangeLine.ToList(), new Color(1f, 0.5f, 0f), closed: false);
+
+            // オレンジ線とトーラス断面の交点を抽出
+            var clippedRegion = OrangeRegionExtractor.Extract(inner, orangeLine);
+            int alignedEndIdx;
+            // IdenticcalInboardが有効な場合、オレンジ線の交点を調整
+            if (node.IdenticalInboard)
+            {
+                (clippedRegion, alignedEndIdx) = PointAlignmentUtils.AlignPointsLeftOfP1(clippedRegion, intersectP1.Value);
+                // Debug.Log($"整列対象はインデックス {alignedEndIdx} まで");
+                var (midpoints, normals) = NormalSegmentAnalyzer.AnalyzeSegmentNormals(clippedRegion, node.Segmentation, alignedEndIdx);
+                view.DrawNormals(midpoints, normals);
+                midpointsToSave = midpoints.Reverse().ToArray();
+                normalsToSave = normals.Reverse().ToArray();
+            }
+            else
+            {
+                var (midpoints, normals) = NormalSegmentAnalyzer.AnalyzeSegmentNormals(clippedRegion, node.Segmentation, 999999);
+                view.DrawNormals(midpoints, normals);
+                midpointsToSave = midpoints.Reverse().ToArray();
+                normalsToSave = normals.Reverse().ToArray();
+            }
+            view.DrawPolyline(clippedRegion.ToList(), Color.red, closed: false);
+            // innerを保存対象の変数に、逆順にして格納
+            innerPointsToSave = clippedRegion.Reverse().ToArray();
+
+
         }
+        else
+        {
+            innerPointsToSave = null;
+        }
+
+        // outerとオレンジ線の交点を求める
+        Vector2? intersectP1Outer = IntersectionUtils.GetClosestIntersection(outer, pL, new Vector2(xR, node.InnerHeight), xL);
+        Vector2? intersectP2Outer = IntersectionUtils.GetClosestIntersection(outer, new Vector2(xL, node.OuterHeight), pR, xR);
+
+        //innerと同様に、
+
+        if (intersectP1Outer.HasValue && intersectP2Outer.HasValue)
+        {
+            Vector2[] orangeLine = new Vector2[] { pL, intersectP1Outer.Value, intersectP2Outer.Value, pR };
+
+            // オレンジ線とトーラス断面の交点を抽出
+            var clippedRegion = OrangeRegionExtractor.Extract(outer, orangeLine);
+            int alignedEndIdx;
+            // IdenticcalInboardが有効な場合、オレンジ線の交点を調整
+            if (node.IdenticalInboard)
+            {
+                (clippedRegion, alignedEndIdx) = PointAlignmentUtils.AlignPointsLeftOfP1(clippedRegion, intersectP1Outer.Value);
+                // Debug.Log($"整列対象はインデックス {alignedEndIdx} まで");
+
+            }
+            view.DrawPolyline(clippedRegion.ToList(), Color.red, closed: false);
+            // outerを保存対象の変数に、逆順にして格納
+            outerPointsToSave = clippedRegion.Reverse().ToArray();
+
+        }
+        else
+        {
+            outerPointsToSave = null;
+        }
+
+
+
+
+        // === 追加: 保存ボタン ===
+        if (GUILayout.Button("Save Torus Description"))
+        {
+            SaveCurrentData();
+        }
+        if (GUILayout.Button("Generate Blanket Mesh"))
+        {
+            GenerateBlanketMesh(node);
+        }
+
 
         Handles.EndGUI();
-
-        if (GUI.changed)
-        {
-            SavePointsToFile(points);
-            EditorUtility.SetDirty(target);
-        }
-
     }
 
-    private void DrawAxisWithTicks(Vector2 viewCenter, Vector2 dataCenter, float scale, Rect rect)
+    /// <summary>
+    /// 現在の inner / outer / 法線データを保存
+    /// </summary>
+    private void SaveCurrentData()
     {
-        int xMin = Mathf.FloorToInt((rect.xMin - viewCenter.x) / scale + dataCenter.x);
-        int xMax = Mathf.CeilToInt((rect.xMax - viewCenter.x) / scale + dataCenter.x);
-        int zMin = Mathf.FloorToInt((rect.yMin - viewCenter.y) / scale + dataCenter.y);
-        int zMax = Mathf.CeilToInt((rect.yMax - viewCenter.y) / scale + dataCenter.y);
-
-        Handles.color = Color.gray;
-
-        // X���ڐ���ƃ��x��
-        for (int x = xMin; x <= xMax; x++)
+        //もし innerPointsToSave, outerPointsToSave, midpointsToSave, normalsToSaveのいずれかが null の場合は何もしない
+        if (innerPointsToSave == null || outerPointsToSave == null || midpointsToSave == null || normalsToSave == null)
         {
-            Vector2 from = new Vector2(viewCenter.x + (x - dataCenter.x) * scale, rect.yMin);
-            Vector2 to = new Vector2(viewCenter.x + (x - dataCenter.x) * scale, rect.yMax);
-            Handles.DrawLine(from, to);
-
-            if (x % 5 == 0)
-                Handles.Label(new Vector2(from.x + 2, viewCenter.y + 4), $"{x}m", EditorStyles.miniLabel);
+            Debug.LogWarning("保存するデータが不完全です。");
+            return;
         }
 
-        // Z���ڐ���ƃ��x��
-        for (int z = zMin; z <= zMax; z++)
-        {
-            Vector2 from = new Vector2(rect.xMin, viewCenter.y + (z - dataCenter.y) * scale);
-            Vector2 to = new Vector2(rect.xMax, viewCenter.y + (z - dataCenter.y) * scale);
-            Handles.DrawLine(from, to);
+        // 保存先フォルダ（Unityプロジェクト/Assets/Torus/）
+        string folder = Path.Combine(Application.dataPath, "Torus");
 
-            if (z % 5 == 0)
-                Handles.Label(new Vector2(viewCenter.x + 5, from.y - 8), $"{z}m", EditorStyles.miniLabel);
+        // フォルダがなければ作成
+        if (!Directory.Exists(folder))
+        {
+            Directory.CreateDirectory(folder);
         }
 
-        // �������iX���EZ���j
-        Handles.color = Color.white;
-        Handles.DrawLine(new Vector2(rect.xMin, viewCenter.y), new Vector2(rect.xMax, viewCenter.y)); // X��
-        Handles.DrawLine(new Vector2(viewCenter.x, rect.yMin), new Vector2(viewCenter.x, rect.yMax)); // Z��
+        // inner 保存
+        File.WriteAllLines(Path.Combine(folder, "inner_unity.txt"),
+            innerPointsToSave.Select(p => $"{p.x:F6},{p.y:F6}"));
 
+        // outer 保存
+        File.WriteAllLines(Path.Combine(folder, "outer_unity.txt"),
+            outerPointsToSave.Select(p => $"{p.x:F6},{p.y:F6}"));
 
-
-    }
-
-
-    private void SavePointsToFile(Vector2[] points)
-    {
-        string directory = "Assets/Torus";
-        string filePath = $"{directory}/torus_parameter.txt";
-
-        // �t�H���_���Ȃ���΍쐬
-        if (!System.IO.Directory.Exists(directory))
-            System.IO.Directory.CreateDirectory(directory);
-
-        using (System.IO.StreamWriter writer = new System.IO.StreamWriter(filePath, false))
+        // normals 保存
+        using (StreamWriter sw = new StreamWriter(Path.Combine(folder, "normals_unity.txt")))
         {
-            writer.WriteLine("# x z");
-            foreach (var p in points)
+            for (int i = 0; i < midpointsToSave.Length; i++)
             {
-                writer.WriteLine($"{p.x:F6} {p.y:F6}");
+                sw.WriteLine($"{midpointsToSave[i].x:F6},{midpointsToSave[i].y:F6},{normalsToSave[i].x:F6},{normalsToSave[i].y:F6}");
             }
         }
 
-        // Unity��Ńt�@�C���X�V�����o������
         AssetDatabase.Refresh();
+        Debug.Log("inner / outer / normals を保存しました: " + folder);
+    }
+
+    private void GenerateBlanketMesh(TorusSectionController node)
+    {
+        node.externalTool.RunUV(scriptFile: Path.Combine(Application.dataPath, @"..\..\mcp_robot2\blanket_generation.py"), directory: Path.Combine(Application.dataPath, @"..\..\mcp_robot2"));
+
     }
 }
-
-

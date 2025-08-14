@@ -14,15 +14,16 @@ mcp = FastMCP("mcp_robot2")
 
 class Link:
     def __init__(self, 
-                 link_name: str,
-                 link_geometry: cq.Workplane|None, 
-                 joint_xyz: np.ndarray = np.zeros(3), 
-                 joint_rpy: np.ndarray = np.zeros(3),
-                 geometry_xyz: np.ndarray = np.zeros(3),
-                 geometry_rpy: np.ndarray = np.zeros(3),
-                 mass:float = 1.0,
-                 filename:str = "",
-                 inertia_vector:np.ndarray = np.zeros(6)
+                link_name: str,
+                link_geometry: cq.Workplane|None, 
+                joint_xyz: np.ndarray = np.zeros(3), 
+                joint_rpy: np.ndarray = np.zeros(3),
+                geometry_xyz: np.ndarray = np.zeros(3),
+                geometry_rpy: np.ndarray = np.zeros(3),
+                mass:float = 1.0,
+                filename:str = "",
+                collision_filename:str = "",
+                inertia_vector:np.ndarray = np.zeros(6)
                     ):
         self.link_name = link_name
         self.link_geometry = link_geometry
@@ -33,6 +34,7 @@ class Link:
         self.geometry_rpy = geometry_rpy
         self.mass = mass
         self.filename = filename
+        self.collision_filename = collision_filename
         self.inertia_vector = inertia_vector
         self.validate()
 
@@ -60,6 +62,13 @@ class Link:
             os.makedirs(os.path.dirname(filename), exist_ok=True)
             cq.exporters.export(self.link_geometry, filename)
             self.filename = f"mesh/{self.link_name}.stl"
+
+            collision_filename = f"{targetdir}/collision/{self.link_name}_col.stl"
+            # if there is no directory, create it
+            os.makedirs(os.path.dirname(collision_filename), exist_ok=True)
+            cq.exporters.export(self.link_geometry, collision_filename)
+            self.collision_filename = f"collision/{self.link_name}_col.stl"
+
             # print(f"Mesh file generated: {filename}")
         # else:
         #     print(f"Mesh file already exists: {filename}. Skipped.")
@@ -79,7 +88,7 @@ class Link:
             ret_description += '\t\t</visual>\n'
             ret_description += '\t\t<collision>\n'
             ret_description += '\t\t\t<geometry>\n'
-            ret_description += f'\t\t\t\t<mesh filename="{self.filename}"/>\n'
+            ret_description += f'\t\t\t\t<mesh filename="{self.collision_filename}"/>\n'
             ret_description += '\t\t\t</geometry>\n'
             ret_description += '\t\t</collision>\n'
         ret_description += '\t\t<inertial>\n'
@@ -101,18 +110,18 @@ class JointType(Enum):
 
 class Joint:
     def __init__(self, joint_name: str, 
-                 joint_type: JointType, 
-                 parent_link: Link, 
-                 child_link: Link,
-                 axis_xyz: np.ndarray = np.array([0,0,1]),
-                 origin_xyz: np.ndarray = None,
-                 origin_rpy: np.ndarray = None,
-                 lower_limit: float = -math.pi,
-                 upper_limit: float = math.pi,
-                 velocity_limit: float = 1.0,
-                 effort_limit: float = 100.0,
-                 damping: float = 0.0,
-                 friction: float = 0.0):
+                joint_type: JointType, 
+                parent_link: Link, 
+                child_link: Link,
+                axis_xyz: np.ndarray = np.array([0,0,1]),
+                origin_xyz: np.ndarray = None,
+                origin_rpy: np.ndarray = None,
+                lower_limit: float = -math.pi,
+                upper_limit: float = math.pi,
+                velocity_limit: float = 1.0,
+                effort_limit: float = 100.0,
+                damping: float = 0.0,
+                friction: float = 0.0):
         self.joint_name = joint_name
         self.joint_type = joint_type
         self.parent_link = parent_link

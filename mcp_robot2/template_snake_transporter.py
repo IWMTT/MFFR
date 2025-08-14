@@ -30,6 +30,9 @@ def template_of_snake_robot():
     if os.path.exists(f"{targetdir}/mesh"):
         import shutil
         shutil.rmtree(f"{targetdir}/mesh")
+    if os.path.exists(f"{targetdir}/collision"):
+        import shutil
+        shutil.rmtree(f"{targetdir}/collision")
 
 
     robot_description = '<?xml version="1.0" ?>\n<robot name="test_robot">\n'
@@ -166,6 +169,9 @@ async def update_snake_robot_link_length(list_of_length=[1.0, 1.41, 1.13,1.175, 
     if os.path.exists(f"{targetdir}/mesh"):
         import shutil
         shutil.rmtree(f"{targetdir}/mesh")
+    if os.path.exists(f"{targetdir}/collision"):
+        import shutil
+        shutil.rmtree(f"{targetdir}/collision")
 
 
     robot_description = '<?xml version="1.0" ?>\n<robot name="test_robot">\n'

@@ -17,7 +17,7 @@
 		</visual>
 		<collision>
 			<geometry>
-				<mesh filename="mesh/base_rail_link.stl"/>
+				<mesh filename="collision/base_rail_link_col.stl"/>
 			</geometry>
 		</collision>
 		<inertial>
@@ -41,7 +41,7 @@
 		</visual>
 		<collision>
 			<geometry>
-				<mesh filename="mesh/link_01.stl"/>
+				<mesh filename="collision/link_01_col.stl"/>
 			</geometry>
 		</collision>
 		<inertial>
@@ -65,7 +65,7 @@
 		</visual>
 		<collision>
 			<geometry>
-				<mesh filename="mesh/link_02.stl"/>
+				<mesh filename="collision/link_02_col.stl"/>
 			</geometry>
 		</collision>
 		<inertial>
@@ -89,7 +89,7 @@
 		</visual>
 		<collision>
 			<geometry>
-				<mesh filename="mesh/link_03.stl"/>
+				<mesh filename="collision/link_03_col.stl"/>
 			</geometry>
 		</collision>
 		<inertial>
@@ -113,7 +113,7 @@
 		</visual>
 		<collision>
 			<geometry>
-				<mesh filename="mesh/link_04.stl"/>
+				<mesh filename="collision/link_04_col.stl"/>
 			</geometry>
 		</collision>
 		<inertial>
@@ -137,7 +137,7 @@
 		</visual>
 		<collision>
 			<geometry>
-				<mesh filename="mesh/link_05.stl"/>
+				<mesh filename="collision/link_05_col.stl"/>
 			</geometry>
 		</collision>
 		<inertial>
@@ -161,7 +161,7 @@
 		</visual>
 		<collision>
 			<geometry>
-				<mesh filename="mesh/link_06.stl"/>
+				<mesh filename="collision/link_06_col.stl"/>
 			</geometry>
 		</collision>
 		<inertial>
@@ -185,7 +185,7 @@
 		</visual>
 		<collision>
 			<geometry>
-				<mesh filename="mesh/link_07.stl"/>
+				<mesh filename="collision/link_07_col.stl"/>
 			</geometry>
 		</collision>
 		<inertial>
@@ -209,7 +209,7 @@
 		</visual>
 		<collision>
 			<geometry>
-				<mesh filename="mesh/link_08.stl"/>
+				<mesh filename="collision/link_08_col.stl"/>
 			</geometry>
 		</collision>
 		<inertial>
@@ -233,7 +233,7 @@
 		</visual>
 		<collision>
 			<geometry>
-				<mesh filename="mesh/link_09.stl"/>
+				<mesh filename="collision/link_09_col.stl"/>
 			</geometry>
 		</collision>
 		<inertial>
@@ -257,7 +257,7 @@
 		</visual>
 		<collision>
 			<geometry>
-				<mesh filename="mesh/link_10.stl"/>
+				<mesh filename="collision/link_10_col.stl"/>
 			</geometry>
 		</collision>
 		<inertial>
