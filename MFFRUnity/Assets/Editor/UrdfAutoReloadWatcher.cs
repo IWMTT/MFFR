@@ -1,4 +1,5 @@
 #if UNITY_EDITOR
+using System.Collections;
 using System.IO;
 using System.Threading.Tasks;
 using Unity.EditorCoroutines.Editor;
@@ -6,6 +7,10 @@ using Unity.Robotics.UrdfImporter;
 using Unity.Robotics.UrdfImporter.Editor;
 using UnityEditor;
 using UnityEngine;
+using System;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using System.Linq;
 
 
 
@@ -43,36 +48,98 @@ public static class UrdfAutoReloadWatcher
             ReloadUrdfModel();
         };
     }
+    
+
+    private static IEnumerator ImportAndThen(string urdfFile, ImportSettings settings, Action<GameObject> onComplete)
+    {
+        IEnumerator<GameObject> importRoutine = UrdfRobotExtensions.Create(urdfFile, settings, true);
+
+        GameObject result = null;
+        while (importRoutine.MoveNext())
+        {
+            result = importRoutine.Current;  // ÊúÄÂæå„Å´Ëøî„Å£„Å¶„Åè„Çã„ÅÆ„ÅåÁîüÊàê„Åï„Çå„ÅüGameObject
+            yield return null;
+        }
+
+        if (result != null)
+        {
+            onComplete?.Invoke(result); // ÂÆå‰∫ÜÊôÇ„Å´„Ç≥„Éº„É´„Éê„ÉÉ„ÇØ
+        }
+        else
+        {
+            Debug.LogWarning("URDF import returned null.");
+        }
+    }
 
     private static void ReloadUrdfModel()
     {
-        // å√Ç¢ÉÇÉfÉãçÌèúÅiÉqÉGÉâÉãÉLÅ[è„ÇÃ "robot" ÉIÉuÉWÉFÉNÉgÇ»Ç«Åj
         GameObject existing = GameObject.Find("test_robot");
         if (existing != null)
         {
-            Object.DestroyImmediate(existing);
+            UnityEngine.Object.DestroyImmediate(existing);
         }
-
-        //// URDF çƒì«Ç›çûÇ›ÅiÉpÉXÇÕ URDF Ç…çáÇÌÇπÇƒïœçXÅj
         //string fullPath = Path.GetFullPath(urdfPath);
         //ImportRobotFromUrdf(fullPath);
         Debug.Log("Reloading URDF model...");
         string assetPath = "Assets/TemporaryRobotDescription/temporary_robot.urdf";
         //await Task.Delay(3000);
 
-        if (Path.GetExtension(assetPath)?.ToLower() == ".urdf") //Ç±Ç±Ç…ÇÕì¸Ç¡ÇƒÇ¢ÇÈ
+        if (Path.GetExtension(assetPath)?.ToLower() == ".urdf") //ÔøΩÔøΩÔøΩÔøΩÔøΩ…ÇÕìÔøΩÔøΩÔøΩÔøΩƒÇÔøΩÔøΩÔøΩ
         {
             // Get existing open window or if none, make a new one:
             FileImportMenu window = (FileImportMenu)EditorWindow.GetWindow(typeof(FileImportMenu));
+            // Change collision mesh decomposing method
+            window.settings.convexMethod = ImportSettings.convexDecomposer.unity;
+
             window.urdfFile = UrdfAssetPathHandler.GetFullAssetPath(assetPath);
             window.minSize = new Vector2(500, 200);
-            window.Show();
-            EditorCoroutineUtility.StartCoroutine(UrdfRobotExtensions.Create(window.urdfFile, window.settings, true), window);
-            //string urdfFile = UrdfAssetPathHandler.GetFullAssetPath(assetPath);
-            //ImportSettings settings = new ImportSettings();
-            //UrdfRobotExtensions.Create(urdfFile, settings, false);
-            //Debug.Log("URDF model reloaded successfully.");
-            window.Close();
+            // window.Show();
+            EditorCoroutineUtility.StartCoroutine(
+                ImportAndThen(window.urdfFile, window.settings, imported =>
+                {
+                    Debug.Log($"URDF Import Complete. Imported GameObject: {imported.name}");
+                    window.Close();
+                    // „Åì„Åì„Å´ÂæåÁ∂öÂá¶ÁêÜ„ÇíÊõ∏„Åè
+                    foreach (var collider in imported.GetComponentsInChildren<Collider>())
+                    {
+                        collider.enabled = false;
+                    }
+                    Debug.Log("All colliders disabled.");
+
+                    foreach (var rb in imported.GetComponentsInChildren<Rigidbody>())
+                    {
+                        rb.isKinematic = true;
+                        rb.detectCollisions = false;
+                    }
+                    foreach (var ab in imported.GetComponentsInChildren<ArticulationBody>())
+                    {
+                        ab.useGravity = false;
+                    }
+
+                    //„ÇÇ„Åóbase*link„Å´„Éû„ÉÉ„ÉÅ„Åô„ÇãGameObject„Åå„ÅÇ„Çå„Å∞
+                    Regex regex = new Regex(@"^base.*link$", RegexOptions.IgnoreCase);
+                    var baseLink = imported.GetComponentsInChildren<Transform>().FirstOrDefault(t => regex.IsMatch(t.name));
+                    if (baseLink != null)
+                    {
+                        //„ÇÇ„ÅóbaseLink„Ååurdf link„ÇíÊåÅ„Å£„Å¶„ÅÑ„Çå„Å∞
+                        var urdfLink = baseLink.GetComponent<UrdfLink>();
+                        if (urdfLink != null)
+                        {
+                            urdfLink.IsBaseLink = true;
+                        }
+
+                        //„ÇÇ„ÅóbaseLink„ÅåArticulationBody„ÇíÊåÅ„Å£„Å¶„ÅÑ„Çå„Å∞
+                        var articulationBody = baseLink.GetComponent<ArticulationBody>();
+                        if (articulationBody != null)
+                        {
+                            articulationBody.immovable = true;
+
+                        }
+
+                    }
+                }),
+                window
+            );
 
 
         }

@@ -1,0 +1,2344 @@
+{
+  "items": [
+    {
+      "name": "SB01C01",
+      "angle": 0.0,
+      "mesh": "BLKT_1.gltf"
+    },
+    {
+      "name": "SB01C02",
+      "angle": 20.0,
+      "mesh": "BLKT_1.gltf"
+    },
+    {
+      "name": "SB01C03",
+      "angle": 40.0,
+      "mesh": "BLKT_1.gltf"
+    },
+    {
+      "name": "SB01C04",
+      "angle": 60.0,
+      "mesh": "BLKT_1.gltf"
+    },
+    {
+      "name": "SB01C05",
+      "angle": 80.0,
+      "mesh": "BLKT_1.gltf"
+    },
+    {
+      "name": "SB01C06",
+      "angle": 100.0,
+      "mesh": "BLKT_1.gltf"
+    },
+    {
+      "name": "SB01C07",
+      "angle": 120.0,
+      "mesh": "BLKT_1.gltf"
+    },
+    {
+      "name": "SB01C08",
+      "angle": 140.0,
+      "mesh": "BLKT_1.gltf"
+    },
+    {
+      "name": "SB01C09",
+      "angle": 160.0,
+      "mesh": "BLKT_1.gltf"
+    },
+    {
+      "name": "SB01C10",
+      "angle": 180.0,
+      "mesh": "BLKT_1.gltf"
+    },
+    {
+      "name": "SB01C11",
+      "angle": 200.0,
+      "mesh": "BLKT_1.gltf"
+    },
+    {
+      "name": "SB01C12",
+      "angle": 220.0,
+      "mesh": "BLKT_1.gltf"
+    },
+    {
+      "name": "SB01C13",
+      "angle": 240.0,
+      "mesh": "BLKT_1.gltf"
+    },
+    {
+      "name": "SB01C14",
+      "angle": 260.0,
+      "mesh": "BLKT_1.gltf"
+    },
+    {
+      "name": "SB01C15",
+      "angle": 280.0,
+      "mesh": "BLKT_1.gltf"
+    },
+    {
+      "name": "SB01C16",
+      "angle": 300.0,
+      "mesh": "BLKT_1.gltf"
+    },
+    {
+      "name": "SB01C17",
+      "angle": 320.0,
+      "mesh": "BLKT_1.gltf"
+    },
+    {
+      "name": "SB01C18",
+      "angle": 340.0,
+      "mesh": "BLKT_1.gltf"
+    },
+    {
+      "name": "SB02C01",
+      "angle": 0.0,
+      "mesh": "BLKT_2.gltf"
+    },
+    {
+      "name": "SB02C02",
+      "angle": 20.0,
+      "mesh": "BLKT_2.gltf"
+    },
+    {
+      "name": "SB02C03",
+      "angle": 40.0,
+      "mesh": "BLKT_2.gltf"
+    },
+    {
+      "name": "SB02C04",
+      "angle": 60.0,
+      "mesh": "BLKT_2.gltf"
+    },
+    {
+      "name": "SB02C05",
+      "angle": 80.0,
+      "mesh": "BLKT_2.gltf"
+    },
+    {
+      "name": "SB02C06",
+      "angle": 100.0,
+      "mesh": "BLKT_2.gltf"
+    },
+    {
+      "name": "SB02C07",
+      "angle": 120.0,
+      "mesh": "BLKT_2.gltf"
+    },
+    {
+      "name": "SB02C08",
+      "angle": 140.0,
+      "mesh": "BLKT_2.gltf"
+    },
+    {
+      "name": "SB02C09",
+      "angle": 160.0,
+      "mesh": "BLKT_2.gltf"
+    },
+    {
+      "name": "SB02C10",
+      "angle": 180.0,
+      "mesh": "BLKT_2.gltf"
+    },
+    {
+      "name": "SB02C11",
+      "angle": 200.0,
+      "mesh": "BLKT_2.gltf"
+    },
+    {
+      "name": "SB02C12",
+      "angle": 220.0,
+      "mesh": "BLKT_2.gltf"
+    },
+    {
+      "name": "SB02C13",
+      "angle": 240.0,
+      "mesh": "BLKT_2.gltf"
+    },
+    {
+      "name": "SB02C14",
+      "angle": 260.0,
+      "mesh": "BLKT_2.gltf"
+    },
+    {
+      "name": "SB02C15",
+      "angle": 280.0,
+      "mesh": "BLKT_2.gltf"
+    },
+    {
+      "name": "SB02C16",
+      "angle": 300.0,
+      "mesh": "BLKT_2.gltf"
+    },
+    {
+      "name": "SB02C17",
+      "angle": 320.0,
+      "mesh": "BLKT_2.gltf"
+    },
+    {
+      "name": "SB02C18",
+      "angle": 340.0,
+      "mesh": "BLKT_2.gltf"
+    },
+    {
+      "name": "SB03C01",
+      "angle": 0.0,
+      "mesh": "BLKT_3.gltf"
+    },
+    {
+      "name": "SB03C02",
+      "angle": 20.0,
+      "mesh": "BLKT_3.gltf"
+    },
+    {
+      "name": "SB03C03",
+      "angle": 40.0,
+      "mesh": "BLKT_3.gltf"
+    },
+    {
+      "name": "SB03C04",
+      "angle": 60.0,
+      "mesh": "BLKT_3.gltf"
+    },
+    {
+      "name": "SB03C05",
+      "angle": 80.0,
+      "mesh": "BLKT_3.gltf"
+    },
+    {
+      "name": "SB03C06",
+      "angle": 100.0,
+      "mesh": "BLKT_3.gltf"
+    },
+    {
+      "name": "SB03C07",
+      "angle": 120.0,
+      "mesh": "BLKT_3.gltf"
+    },
+    {
+      "name": "SB03C08",
+      "angle": 140.0,
+      "mesh": "BLKT_3.gltf"
+    },
+    {
+      "name": "SB03C09",
+      "angle": 160.0,
+      "mesh": "BLKT_3.gltf"
+    },
+    {
+      "name": "SB03C10",
+      "angle": 180.0,
+      "mesh": "BLKT_3.gltf"
+    },
+    {
+      "name": "SB03C11",
+      "angle": 200.0,
+      "mesh": "BLKT_3.gltf"
+    },
+    {
+      "name": "SB03C12",
+      "angle": 220.0,
+      "mesh": "BLKT_3.gltf"
+    },
+    {
+      "name": "SB03C13",
+      "angle": 240.0,
+      "mesh": "BLKT_3.gltf"
+    },
+    {
+      "name": "SB03C14",
+      "angle": 260.0,
+      "mesh": "BLKT_3.gltf"
+    },
+    {
+      "name": "SB03C15",
+      "angle": 280.0,
+      "mesh": "BLKT_3.gltf"
+    },
+    {
+      "name": "SB03C16",
+      "angle": 300.0,
+      "mesh": "BLKT_3.gltf"
+    },
+    {
+      "name": "SB03C17",
+      "angle": 320.0,
+      "mesh": "BLKT_3.gltf"
+    },
+    {
+      "name": "SB03C18",
+      "angle": 340.0,
+      "mesh": "BLKT_3.gltf"
+    },
+    {
+      "name": "SB04C01",
+      "angle": 0.0,
+      "mesh": "BLKT_4.gltf"
+    },
+    {
+      "name": "SB04C02",
+      "angle": 20.0,
+      "mesh": "BLKT_4.gltf"
+    },
+    {
+      "name": "SB04C03",
+      "angle": 40.0,
+      "mesh": "BLKT_4.gltf"
+    },
+    {
+      "name": "SB04C04",
+      "angle": 60.0,
+      "mesh": "BLKT_4.gltf"
+    },
+    {
+      "name": "SB04C05",
+      "angle": 80.0,
+      "mesh": "BLKT_4.gltf"
+    },
+    {
+      "name": "SB04C06",
+      "angle": 100.0,
+      "mesh": "BLKT_4.gltf"
+    },
+    {
+      "name": "SB04C07",
+      "angle": 120.0,
+      "mesh": "BLKT_4.gltf"
+    },
+    {
+      "name": "SB04C08",
+      "angle": 140.0,
+      "mesh": "BLKT_4.gltf"
+    },
+    {
+      "name": "SB04C09",
+      "angle": 160.0,
+      "mesh": "BLKT_4.gltf"
+    },
+    {
+      "name": "SB04C10",
+      "angle": 180.0,
+      "mesh": "BLKT_4.gltf"
+    },
+    {
+      "name": "SB04C11",
+      "angle": 200.0,
+      "mesh": "BLKT_4.gltf"
+    },
+    {
+      "name": "SB04C12",
+      "angle": 220.0,
+      "mesh": "BLKT_4.gltf"
+    },
+    {
+      "name": "SB04C13",
+      "angle": 240.0,
+      "mesh": "BLKT_4.gltf"
+    },
+    {
+      "name": "SB04C14",
+      "angle": 260.0,
+      "mesh": "BLKT_4.gltf"
+    },
+    {
+      "name": "SB04C15",
+      "angle": 280.0,
+      "mesh": "BLKT_4.gltf"
+    },
+    {
+      "name": "SB04C16",
+      "angle": 300.0,
+      "mesh": "BLKT_4.gltf"
+    },
+    {
+      "name": "SB04C17",
+      "angle": 320.0,
+      "mesh": "BLKT_4.gltf"
+    },
+    {
+      "name": "SB04C18",
+      "angle": 340.0,
+      "mesh": "BLKT_4.gltf"
+    },
+    {
+      "name": "SB05C01",
+      "angle": 0.0,
+      "mesh": "BLKT_5.gltf"
+    },
+    {
+      "name": "SB05C02",
+      "angle": 20.0,
+      "mesh": "BLKT_5.gltf"
+    },
+    {
+      "name": "SB05C03",
+      "angle": 40.0,
+      "mesh": "BLKT_5.gltf"
+    },
+    {
+      "name": "SB05C04",
+      "angle": 60.0,
+      "mesh": "BLKT_5.gltf"
+    },
+    {
+      "name": "SB05C05",
+      "angle": 80.0,
+      "mesh": "BLKT_5.gltf"
+    },
+    {
+      "name": "SB05C06",
+      "angle": 100.0,
+      "mesh": "BLKT_5.gltf"
+    },
+    {
+      "name": "SB05C07",
+      "angle": 120.0,
+      "mesh": "BLKT_5.gltf"
+    },
+    {
+      "name": "SB05C08",
+      "angle": 140.0,
+      "mesh": "BLKT_5.gltf"
+    },
+    {
+      "name": "SB05C09",
+      "angle": 160.0,
+      "mesh": "BLKT_5.gltf"
+    },
+    {
+      "name": "SB05C10",
+      "angle": 180.0,
+      "mesh": "BLKT_5.gltf"
+    },
+    {
+      "name": "SB05C11",
+      "angle": 200.0,
+      "mesh": "BLKT_5.gltf"
+    },
+    {
+      "name": "SB05C12",
+      "angle": 220.0,
+      "mesh": "BLKT_5.gltf"
+    },
+    {
+      "name": "SB05C13",
+      "angle": 240.0,
+      "mesh": "BLKT_5.gltf"
+    },
+    {
+      "name": "SB05C14",
+      "angle": 260.0,
+      "mesh": "BLKT_5.gltf"
+    },
+    {
+      "name": "SB05C15",
+      "angle": 280.0,
+      "mesh": "BLKT_5.gltf"
+    },
+    {
+      "name": "SB05C16",
+      "angle": 300.0,
+      "mesh": "BLKT_5.gltf"
+    },
+    {
+      "name": "SB05C17",
+      "angle": 320.0,
+      "mesh": "BLKT_5.gltf"
+    },
+    {
+      "name": "SB05C18",
+      "angle": 340.0,
+      "mesh": "BLKT_5.gltf"
+    },
+    {
+      "name": "SB06C01",
+      "angle": 0.0,
+      "mesh": "BLKT_6.gltf"
+    },
+    {
+      "name": "SB06C02",
+      "angle": 20.0,
+      "mesh": "BLKT_6.gltf"
+    },
+    {
+      "name": "SB06C03",
+      "angle": 40.0,
+      "mesh": "BLKT_6.gltf"
+    },
+    {
+      "name": "SB06C04",
+      "angle": 60.0,
+      "mesh": "BLKT_6.gltf"
+    },
+    {
+      "name": "SB06C05",
+      "angle": 80.0,
+      "mesh": "BLKT_6.gltf"
+    },
+    {
+      "name": "SB06C06",
+      "angle": 100.0,
+      "mesh": "BLKT_6.gltf"
+    },
+    {
+      "name": "SB06C07",
+      "angle": 120.0,
+      "mesh": "BLKT_6.gltf"
+    },
+    {
+      "name": "SB06C08",
+      "angle": 140.0,
+      "mesh": "BLKT_6.gltf"
+    },
+    {
+      "name": "SB06C09",
+      "angle": 160.0,
+      "mesh": "BLKT_6.gltf"
+    },
+    {
+      "name": "SB06C10",
+      "angle": 180.0,
+      "mesh": "BLKT_6.gltf"
+    },
+    {
+      "name": "SB06C11",
+      "angle": 200.0,
+      "mesh": "BLKT_6.gltf"
+    },
+    {
+      "name": "SB06C12",
+      "angle": 220.0,
+      "mesh": "BLKT_6.gltf"
+    },
+    {
+      "name": "SB06C13",
+      "angle": 240.0,
+      "mesh": "BLKT_6.gltf"
+    },
+    {
+      "name": "SB06C14",
+      "angle": 260.0,
+      "mesh": "BLKT_6.gltf"
+    },
+    {
+      "name": "SB06C15",
+      "angle": 280.0,
+      "mesh": "BLKT_6.gltf"
+    },
+    {
+      "name": "SB06C16",
+      "angle": 300.0,
+      "mesh": "BLKT_6.gltf"
+    },
+    {
+      "name": "SB06C17",
+      "angle": 320.0,
+      "mesh": "BLKT_6.gltf"
+    },
+    {
+      "name": "SB06C18",
+      "angle": 340.0,
+      "mesh": "BLKT_6.gltf"
+    },
+    {
+      "name": "SB07C01",
+      "angle": 0.0,
+      "mesh": "BLKT_7.gltf"
+    },
+    {
+      "name": "SB07C02",
+      "angle": 20.0,
+      "mesh": "BLKT_7.gltf"
+    },
+    {
+      "name": "SB07C03",
+      "angle": 40.0,
+      "mesh": "BLKT_7.gltf"
+    },
+    {
+      "name": "SB07C04",
+      "angle": 60.0,
+      "mesh": "BLKT_7.gltf"
+    },
+    {
+      "name": "SB07C05",
+      "angle": 80.0,
+      "mesh": "BLKT_7.gltf"
+    },
+    {
+      "name": "SB07C06",
+      "angle": 100.0,
+      "mesh": "BLKT_7.gltf"
+    },
+    {
+      "name": "SB07C07",
+      "angle": 120.0,
+      "mesh": "BLKT_7.gltf"
+    },
+    {
+      "name": "SB07C08",
+      "angle": 140.0,
+      "mesh": "BLKT_7.gltf"
+    },
+    {
+      "name": "SB07C09",
+      "angle": 160.0,
+      "mesh": "BLKT_7.gltf"
+    },
+    {
+      "name": "SB07C10",
+      "angle": 180.0,
+      "mesh": "BLKT_7.gltf"
+    },
+    {
+      "name": "SB07C11",
+      "angle": 200.0,
+      "mesh": "BLKT_7.gltf"
+    },
+    {
+      "name": "SB07C12",
+      "angle": 220.0,
+      "mesh": "BLKT_7.gltf"
+    },
+    {
+      "name": "SB07C13",
+      "angle": 240.0,
+      "mesh": "BLKT_7.gltf"
+    },
+    {
+      "name": "SB07C14",
+      "angle": 260.0,
+      "mesh": "BLKT_7.gltf"
+    },
+    {
+      "name": "SB07C15",
+      "angle": 280.0,
+      "mesh": "BLKT_7.gltf"
+    },
+    {
+      "name": "SB07C16",
+      "angle": 300.0,
+      "mesh": "BLKT_7.gltf"
+    },
+    {
+      "name": "SB07C17",
+      "angle": 320.0,
+      "mesh": "BLKT_7.gltf"
+    },
+    {
+      "name": "SB07C18",
+      "angle": 340.0,
+      "mesh": "BLKT_7.gltf"
+    },
+    {
+      "name": "SB08C01",
+      "angle": 0.0,
+      "mesh": "BLKT_8.gltf"
+    },
+    {
+      "name": "SB08C02",
+      "angle": 20.0,
+      "mesh": "BLKT_8.gltf"
+    },
+    {
+      "name": "SB08C03",
+      "angle": 40.0,
+      "mesh": "BLKT_8.gltf"
+    },
+    {
+      "name": "SB08C04",
+      "angle": 60.0,
+      "mesh": "BLKT_8.gltf"
+    },
+    {
+      "name": "SB08C05",
+      "angle": 80.0,
+      "mesh": "BLKT_8.gltf"
+    },
+    {
+      "name": "SB08C06",
+      "angle": 100.0,
+      "mesh": "BLKT_8.gltf"
+    },
+    {
+      "name": "SB08C07",
+      "angle": 120.0,
+      "mesh": "BLKT_8.gltf"
+    },
+    {
+      "name": "SB08C08",
+      "angle": 140.0,
+      "mesh": "BLKT_8.gltf"
+    },
+    {
+      "name": "SB08C09",
+      "angle": 160.0,
+      "mesh": "BLKT_8.gltf"
+    },
+    {
+      "name": "SB08C10",
+      "angle": 180.0,
+      "mesh": "BLKT_8.gltf"
+    },
+    {
+      "name": "SB08C11",
+      "angle": 200.0,
+      "mesh": "BLKT_8.gltf"
+    },
+    {
+      "name": "SB08C12",
+      "angle": 220.0,
+      "mesh": "BLKT_8.gltf"
+    },
+    {
+      "name": "SB08C13",
+      "angle": 240.0,
+      "mesh": "BLKT_8.gltf"
+    },
+    {
+      "name": "SB08C14",
+      "angle": 260.0,
+      "mesh": "BLKT_8.gltf"
+    },
+    {
+      "name": "SB08C15",
+      "angle": 280.0,
+      "mesh": "BLKT_8.gltf"
+    },
+    {
+      "name": "SB08C16",
+      "angle": 300.0,
+      "mesh": "BLKT_8.gltf"
+    },
+    {
+      "name": "SB08C17",
+      "angle": 320.0,
+      "mesh": "BLKT_8.gltf"
+    },
+    {
+      "name": "SB08C18",
+      "angle": 340.0,
+      "mesh": "BLKT_8.gltf"
+    },
+    {
+      "name": "SB09C01",
+      "angle": 0.0,
+      "mesh": "BLKT_9.gltf"
+    },
+    {
+      "name": "SB09C02",
+      "angle": 20.0,
+      "mesh": "BLKT_9.gltf"
+    },
+    {
+      "name": "SB09C03",
+      "angle": 40.0,
+      "mesh": "BLKT_9.gltf"
+    },
+    {
+      "name": "SB09C04",
+      "angle": 60.0,
+      "mesh": "BLKT_9.gltf"
+    },
+    {
+      "name": "SB09C05",
+      "angle": 80.0,
+      "mesh": "BLKT_9.gltf"
+    },
+    {
+      "name": "SB09C06",
+      "angle": 100.0,
+      "mesh": "BLKT_9.gltf"
+    },
+    {
+      "name": "SB09C07",
+      "angle": 120.0,
+      "mesh": "BLKT_9.gltf"
+    },
+    {
+      "name": "SB09C08",
+      "angle": 140.0,
+      "mesh": "BLKT_9.gltf"
+    },
+    {
+      "name": "SB09C09",
+      "angle": 160.0,
+      "mesh": "BLKT_9.gltf"
+    },
+    {
+      "name": "SB09C10",
+      "angle": 180.0,
+      "mesh": "BLKT_9.gltf"
+    },
+    {
+      "name": "SB09C11",
+      "angle": 200.0,
+      "mesh": "BLKT_9.gltf"
+    },
+    {
+      "name": "SB09C12",
+      "angle": 220.0,
+      "mesh": "BLKT_9.gltf"
+    },
+    {
+      "name": "SB09C13",
+      "angle": 240.0,
+      "mesh": "BLKT_9.gltf"
+    },
+    {
+      "name": "SB09C14",
+      "angle": 260.0,
+      "mesh": "BLKT_9.gltf"
+    },
+    {
+      "name": "SB09C15",
+      "angle": 280.0,
+      "mesh": "BLKT_9.gltf"
+    },
+    {
+      "name": "SB09C16",
+      "angle": 300.0,
+      "mesh": "BLKT_9.gltf"
+    },
+    {
+      "name": "SB09C17",
+      "angle": 320.0,
+      "mesh": "BLKT_9.gltf"
+    },
+    {
+      "name": "SB09C18",
+      "angle": 340.0,
+      "mesh": "BLKT_9.gltf"
+    },
+    {
+      "name": "SB10C01",
+      "angle": 0.0,
+      "mesh": "BLKT_10.gltf"
+    },
+    {
+      "name": "SB10C02",
+      "angle": 20.0,
+      "mesh": "BLKT_10.gltf"
+    },
+    {
+      "name": "SB10C03",
+      "angle": 40.0,
+      "mesh": "BLKT_10.gltf"
+    },
+    {
+      "name": "SB10C04",
+      "angle": 60.0,
+      "mesh": "BLKT_10.gltf"
+    },
+    {
+      "name": "SB10C05",
+      "angle": 80.0,
+      "mesh": "BLKT_10.gltf"
+    },
+    {
+      "name": "SB10C06",
+      "angle": 100.0,
+      "mesh": "BLKT_10.gltf"
+    },
+    {
+      "name": "SB10C07",
+      "angle": 120.0,
+      "mesh": "BLKT_10.gltf"
+    },
+    {
+      "name": "SB10C08",
+      "angle": 140.0,
+      "mesh": "BLKT_10.gltf"
+    },
+    {
+      "name": "SB10C09",
+      "angle": 160.0,
+      "mesh": "BLKT_10.gltf"
+    },
+    {
+      "name": "SB10C10",
+      "angle": 180.0,
+      "mesh": "BLKT_10.gltf"
+    },
+    {
+      "name": "SB10C11",
+      "angle": 200.0,
+      "mesh": "BLKT_10.gltf"
+    },
+    {
+      "name": "SB10C12",
+      "angle": 220.0,
+      "mesh": "BLKT_10.gltf"
+    },
+    {
+      "name": "SB10C13",
+      "angle": 240.0,
+      "mesh": "BLKT_10.gltf"
+    },
+    {
+      "name": "SB10C14",
+      "angle": 260.0,
+      "mesh": "BLKT_10.gltf"
+    },
+    {
+      "name": "SB10C15",
+      "angle": 280.0,
+      "mesh": "BLKT_10.gltf"
+    },
+    {
+      "name": "SB10C16",
+      "angle": 300.0,
+      "mesh": "BLKT_10.gltf"
+    },
+    {
+      "name": "SB10C17",
+      "angle": 320.0,
+      "mesh": "BLKT_10.gltf"
+    },
+    {
+      "name": "SB10C18",
+      "angle": 340.0,
+      "mesh": "BLKT_10.gltf"
+    },
+    {
+      "name": "SB11C01",
+      "angle": 10.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11S01",
+      "angle": 20.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11C02",
+      "angle": 30.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11S02",
+      "angle": 40.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11C03",
+      "angle": 50.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11S03",
+      "angle": 60.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11C04",
+      "angle": 70.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11S04",
+      "angle": 80.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11C05",
+      "angle": 90.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11S05",
+      "angle": 100.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11C06",
+      "angle": 110.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11S06",
+      "angle": 120.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11C07",
+      "angle": 130.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11S07",
+      "angle": 140.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11C08",
+      "angle": 150.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11S08",
+      "angle": 160.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11C09",
+      "angle": 170.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11S09",
+      "angle": 180.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11C10",
+      "angle": 190.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11S10",
+      "angle": 200.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11C11",
+      "angle": 210.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11S11",
+      "angle": 220.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11C12",
+      "angle": 230.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11S12",
+      "angle": 240.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11C13",
+      "angle": 250.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11S13",
+      "angle": 260.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11C14",
+      "angle": 270.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11S14",
+      "angle": 280.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11C15",
+      "angle": 290.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11S15",
+      "angle": 300.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11C16",
+      "angle": 310.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11S16",
+      "angle": 320.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11C17",
+      "angle": 330.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11S17",
+      "angle": 340.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11C18",
+      "angle": 350.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB11S18",
+      "angle": 360.0,
+      "mesh": "BLKT_11.gltf"
+    },
+    {
+      "name": "SB12C01",
+      "angle": 10.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12S01",
+      "angle": 20.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12C02",
+      "angle": 30.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12S02",
+      "angle": 40.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12C03",
+      "angle": 50.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12S03",
+      "angle": 60.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12C04",
+      "angle": 70.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12S04",
+      "angle": 80.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12C05",
+      "angle": 90.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12S05",
+      "angle": 100.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12C06",
+      "angle": 110.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12S06",
+      "angle": 120.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12C07",
+      "angle": 130.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12S07",
+      "angle": 140.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12C08",
+      "angle": 150.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12S08",
+      "angle": 160.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12C09",
+      "angle": 170.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12S09",
+      "angle": 180.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12C10",
+      "angle": 190.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12S10",
+      "angle": 200.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12C11",
+      "angle": 210.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12S11",
+      "angle": 220.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12C12",
+      "angle": 230.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12S12",
+      "angle": 240.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12C13",
+      "angle": 250.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12S13",
+      "angle": 260.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12C14",
+      "angle": 270.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12S14",
+      "angle": 280.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12C15",
+      "angle": 290.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12S15",
+      "angle": 300.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12C16",
+      "angle": 310.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12S16",
+      "angle": 320.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12C17",
+      "angle": 330.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12S17",
+      "angle": 340.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12C18",
+      "angle": 350.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB12S18",
+      "angle": 360.0,
+      "mesh": "BLKT_12.gltf"
+    },
+    {
+      "name": "SB13C01",
+      "angle": 10.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13S01",
+      "angle": 20.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13C02",
+      "angle": 30.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13S02",
+      "angle": 40.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13C03",
+      "angle": 50.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13S03",
+      "angle": 60.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13C04",
+      "angle": 70.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13S04",
+      "angle": 80.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13C05",
+      "angle": 90.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13S05",
+      "angle": 100.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13C06",
+      "angle": 110.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13S06",
+      "angle": 120.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13C07",
+      "angle": 130.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13S07",
+      "angle": 140.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13C08",
+      "angle": 150.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13S08",
+      "angle": 160.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13C09",
+      "angle": 170.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13S09",
+      "angle": 180.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13C10",
+      "angle": 190.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13S10",
+      "angle": 200.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13C11",
+      "angle": 210.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13S11",
+      "angle": 220.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13C12",
+      "angle": 230.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13S12",
+      "angle": 240.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13C13",
+      "angle": 250.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13S13",
+      "angle": 260.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13C14",
+      "angle": 270.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13S14",
+      "angle": 280.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13C15",
+      "angle": 290.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13S15",
+      "angle": 300.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13C16",
+      "angle": 310.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13S16",
+      "angle": 320.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13C17",
+      "angle": 330.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13S17",
+      "angle": 340.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13C18",
+      "angle": 350.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB13S18",
+      "angle": 360.0,
+      "mesh": "BLKT_13.gltf"
+    },
+    {
+      "name": "SB14C01",
+      "angle": 10.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14S01",
+      "angle": 20.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14C02",
+      "angle": 30.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14S02",
+      "angle": 40.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14C03",
+      "angle": 50.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14S03",
+      "angle": 60.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14C04",
+      "angle": 70.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14S04",
+      "angle": 80.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14C05",
+      "angle": 90.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14S05",
+      "angle": 100.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14C06",
+      "angle": 110.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14S06",
+      "angle": 120.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14C07",
+      "angle": 130.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14S07",
+      "angle": 140.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14C08",
+      "angle": 150.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14S08",
+      "angle": 160.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14C09",
+      "angle": 170.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14S09",
+      "angle": 180.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14C10",
+      "angle": 190.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14S10",
+      "angle": 200.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14C11",
+      "angle": 210.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14S11",
+      "angle": 220.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14C12",
+      "angle": 230.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14S12",
+      "angle": 240.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14C13",
+      "angle": 250.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14S13",
+      "angle": 260.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14C14",
+      "angle": 270.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14S14",
+      "angle": 280.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14C15",
+      "angle": 290.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14S15",
+      "angle": 300.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14C16",
+      "angle": 310.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14S16",
+      "angle": 320.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14C17",
+      "angle": 330.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14S17",
+      "angle": 340.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14C18",
+      "angle": 350.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB14S18",
+      "angle": 360.0,
+      "mesh": "BLKT_14.gltf"
+    },
+    {
+      "name": "SB15C01",
+      "angle": 10.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15S01",
+      "angle": 20.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15C02",
+      "angle": 30.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15S02",
+      "angle": 40.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15C03",
+      "angle": 50.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15S03",
+      "angle": 60.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15C04",
+      "angle": 70.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15S04",
+      "angle": 80.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15C05",
+      "angle": 90.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15S05",
+      "angle": 100.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15C06",
+      "angle": 110.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15S06",
+      "angle": 120.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15C07",
+      "angle": 130.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15S07",
+      "angle": 140.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15C08",
+      "angle": 150.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15S08",
+      "angle": 160.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15C09",
+      "angle": 170.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15S09",
+      "angle": 180.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15C10",
+      "angle": 190.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15S10",
+      "angle": 200.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15C11",
+      "angle": 210.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15S11",
+      "angle": 220.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15C12",
+      "angle": 230.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15S12",
+      "angle": 240.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15C13",
+      "angle": 250.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15S13",
+      "angle": 260.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15C14",
+      "angle": 270.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15S14",
+      "angle": 280.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15C15",
+      "angle": 290.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15S15",
+      "angle": 300.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15C16",
+      "angle": 310.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15S16",
+      "angle": 320.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15C17",
+      "angle": 330.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15S17",
+      "angle": 340.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15C18",
+      "angle": 350.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB15S18",
+      "angle": 360.0,
+      "mesh": "BLKT_15.gltf"
+    },
+    {
+      "name": "SB16C01",
+      "angle": 10.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16S01",
+      "angle": 20.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16C02",
+      "angle": 30.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16S02",
+      "angle": 40.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16C03",
+      "angle": 50.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16S03",
+      "angle": 60.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16C04",
+      "angle": 70.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16S04",
+      "angle": 80.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16C05",
+      "angle": 90.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16S05",
+      "angle": 100.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16C06",
+      "angle": 110.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16S06",
+      "angle": 120.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16C07",
+      "angle": 130.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16S07",
+      "angle": 140.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16C08",
+      "angle": 150.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16S08",
+      "angle": 160.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16C09",
+      "angle": 170.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16S09",
+      "angle": 180.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16C10",
+      "angle": 190.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16S10",
+      "angle": 200.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16C11",
+      "angle": 210.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16S11",
+      "angle": 220.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16C12",
+      "angle": 230.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16S12",
+      "angle": 240.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16C13",
+      "angle": 250.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16S13",
+      "angle": 260.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16C14",
+      "angle": 270.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16S14",
+      "angle": 280.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16C15",
+      "angle": 290.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16S15",
+      "angle": 300.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16C16",
+      "angle": 310.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16S16",
+      "angle": 320.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16C17",
+      "angle": 330.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16S17",
+      "angle": 340.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16C18",
+      "angle": 350.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB16S18",
+      "angle": 360.0,
+      "mesh": "BLKT_16.gltf"
+    },
+    {
+      "name": "SB17C01",
+      "angle": 10.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17S01",
+      "angle": 20.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17C02",
+      "angle": 30.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17S02",
+      "angle": 40.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17C03",
+      "angle": 50.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17S03",
+      "angle": 60.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17C04",
+      "angle": 70.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17S04",
+      "angle": 80.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17C05",
+      "angle": 90.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17S05",
+      "angle": 100.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17C06",
+      "angle": 110.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17S06",
+      "angle": 120.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17C07",
+      "angle": 130.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17S07",
+      "angle": 140.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17C08",
+      "angle": 150.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17S08",
+      "angle": 160.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17C09",
+      "angle": 170.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17S09",
+      "angle": 180.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17C10",
+      "angle": 190.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17S10",
+      "angle": 200.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17C11",
+      "angle": 210.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17S11",
+      "angle": 220.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17C12",
+      "angle": 230.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17S12",
+      "angle": 240.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17C13",
+      "angle": 250.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17S13",
+      "angle": 260.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17C14",
+      "angle": 270.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17S14",
+      "angle": 280.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17C15",
+      "angle": 290.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17S15",
+      "angle": 300.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17C16",
+      "angle": 310.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17S16",
+      "angle": 320.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17C17",
+      "angle": 330.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17S17",
+      "angle": 340.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17C18",
+      "angle": 350.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB17S18",
+      "angle": 360.0,
+      "mesh": "BLKT_17.gltf"
+    },
+    {
+      "name": "SB18C01",
+      "angle": 10.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18S01",
+      "angle": 20.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18C02",
+      "angle": 30.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18S02",
+      "angle": 40.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18C03",
+      "angle": 50.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18S03",
+      "angle": 60.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18C04",
+      "angle": 70.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18S04",
+      "angle": 80.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18C05",
+      "angle": 90.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18S05",
+      "angle": 100.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18C06",
+      "angle": 110.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18S06",
+      "angle": 120.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18C07",
+      "angle": 130.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18S07",
+      "angle": 140.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18C08",
+      "angle": 150.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18S08",
+      "angle": 160.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18C09",
+      "angle": 170.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18S09",
+      "angle": 180.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18C10",
+      "angle": 190.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18S10",
+      "angle": 200.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18C11",
+      "angle": 210.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18S11",
+      "angle": 220.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18C12",
+      "angle": 230.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18S12",
+      "angle": 240.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18C13",
+      "angle": 250.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18S13",
+      "angle": 260.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18C14",
+      "angle": 270.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18S14",
+      "angle": 280.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18C15",
+      "angle": 290.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18S15",
+      "angle": 300.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18C16",
+      "angle": 310.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18S16",
+      "angle": 320.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18C17",
+      "angle": 330.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18S17",
+      "angle": 340.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18C18",
+      "angle": 350.0,
+      "mesh": "BLKT_18.gltf"
+    },
+    {
+      "name": "SB18S18",
+      "angle": 360.0,
+      "mesh": "BLKT_18.gltf"
+    }
+  ]
+}
