@@ -87,6 +87,9 @@ grep -F "source /opt/ros/$ROS_DISTRO/setup.bash" "$BASHRC_PATH" || echo "source 
 grep -F "export ROS_AUTOMATIC_DISCOVERY_RANGE=" "$BASHRC_PATH" || echo "# export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST" >> "$BASHRC_PATH"
 chown "$USER:$USER" "$BASHRC_PATH"
 
+# add "source install/setup.bash" to the .bashrc
+echo "/home/ubuntu/moveit2_ws/install/setup.bash" >> "$BASHRC_PATH"
+
 # Fix rosdep permission
 mkdir -p "$HOME/.ros"
 cp -r /root/.ros/rosdep "$HOME/.ros/rosdep"

@@ -165,11 +165,12 @@ RUN apt-get update && rosdep update && \
 
 # ビルド
 RUN . /opt/ros/jazzy/setup.sh && \
-    colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --symlink-install
+    colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --symlink-install --packages-skip moveit_ros_tests
 
 
 
 COPY ./entrypoint.sh /
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT [ "/bin/bash", "-c", "/entrypoint.sh" ]
 
 ENV USER ubuntu
