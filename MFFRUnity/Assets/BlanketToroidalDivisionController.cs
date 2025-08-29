@@ -11,6 +11,7 @@ using System.IO;
 using Newtonsoft.Json;
 using System;
 using UnityEngine.WSA;
+using System.Runtime.CompilerServices;
 
 public class BlanketToroidalDivisionController : MonoBehaviour
 {
@@ -231,6 +232,17 @@ public class BlanketToroidalDivisionControllerEditor : Editor
         {
             SaveCurrentData(controller);
         }
+
+        if (GUILayout.Button("Generate New Blanket Meshes"))
+        {
+            AssetDatabase.StartAssetEditing();
+            ExternalTool tool = ScriptableObject.CreateInstance<ExternalTool>();
+            tool.RunUV(scriptFile: "blanket_generation.py", directory: "../mcp_robot2/", arguments: "");
+            AssetDatabase.StopAssetEditing();
+            AssetDatabase.Refresh();
+
+        }
+
 
         serializedObject.ApplyModifiedProperties();
 

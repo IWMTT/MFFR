@@ -123,10 +123,10 @@ public class GraphNodeEditor : Editor
         {
             SaveCurrentData();
         }
-        if (GUILayout.Button("Generate Blanket Mesh"))
-        {
-            GenerateBlanketMesh(node);
-        }
+        // if (GUILayout.Button("Generate Blanket Mesh"))
+        // {
+        //     GenerateBlanketMesh(node);
+        // }
 
 
         Handles.EndGUI();
@@ -174,9 +174,9 @@ public class GraphNodeEditor : Editor
         Debug.Log("inner / outer / normals を保存しました: " + folder);
     }
 
-    private void GenerateBlanketMesh(TorusSectionController node)
-    {
-        node.externalTool.RunUV(scriptFile: Path.Combine(Application.dataPath, @"..\..\mcp_robot2\blanket_generation.py"), directory: Path.Combine(Application.dataPath, @"..\..\mcp_robot2"));
+    // private void GenerateBlanketMesh(TorusSectionController node)
+    // {
+    //     node.externalTool.RunUV(scriptFile: Path.Combine(Application.dataPath, @"..\..\mcp_robot2\blanket_generation.py"), directory: Path.Combine(Application.dataPath, @"..\..\mcp_robot2"));
 
-    }
+    // }
 }
