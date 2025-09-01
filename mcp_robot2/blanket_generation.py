@@ -56,7 +56,7 @@ with open(inner_desc, 'r') as f:
     else:
         average_length_inner = 0
 
-print(average_length_inner)
+# print(average_length_inner)
 
 points_outer = []
 with open(outer_desc, 'r') as f:
@@ -107,7 +107,7 @@ for i in range(len(normals)):
     # 角度差を -pi～pi に正規化
     delta_angle = (ang2 - ang1 + math.pi) % (2 * math.pi) - math.pi
 
-    print(delta_angle)
+    # print(delta_angle)
 
     # 前後originの距離（弧長近似）
     arc_length = np.linalg.norm(origins[(i + 1) % len(normals)] - origins[(i - 1) % len(normals)])
@@ -140,7 +140,7 @@ for i in range(len(normals)):
     face_to_revolve = face_orig * face_intersect
 
     # rotation_angles をもとに、face_to_revolveを回転させてブランケットを生成
-    print(f"Rotation angle for blanket {i}: {rotation_angles[i]} degrees")
+    # print(f"Rotation angle for blanket {i}: {rotation_angles[i]} degrees")
     radius = abs(origin[0])  # normal_vector が生えている x座標を半径とみなす
 
     if radius > 1e-6:
@@ -158,6 +158,9 @@ for i in range(len(normals)):
     blanket = blanket1.union(blanket2)
 
     blankets.append(blanket)
+    
+    # 生成が完了したブランケットの番号を表示
+    print(f"Generated blanket {i+1}/{len(normals)}")
 
 # show([blankets, xyz_axes()])
 
@@ -174,16 +177,17 @@ for blanket in blankets:
     asm.add(blanket, name=f"blanket_{blankets.index(blanket)}", color=cq.Color(0.5, 0.5, 0.5))
     asm.export(f"{mesh_dir}/BLKT_{blankets.index(blanket)+1}.gltf", tolerance=5, angularTolerance=1)
 
+print(f"Exported {len(blankets)} blankets to {mesh_dir}")
 
 
-# blanketsをstlに出力する前に、1つにまとめる
-for i in range(len(blankets)):
-    if i == 0:
-        combined_blanket = blankets[i]
-    else:
-        combined_blanket = combined_blanket.union(blankets[i])
-# # combined_blanketをstlに出力
-cq.exporters.export(combined_blanket, "combined_blanket_51.stl",    tolerance=5, angularTolerance=1 )
-cq.exporters.export(combined_blanket, "combined_blanket_lowpoly.stl",    tolerance=5, angularTolerance=1 )
-cq.exporters.export(combined_blanket, "combined_blanket_normal.stl",    tolerance=2.5, angularTolerance=0.5 )
-cq.exporters.export(combined_blanket, "combined_blanket_fine.stl",    tolerance=1, angularTolerance=0.1 )
+# # blanketsをstlに出力する前に、1つにまとめる
+# for i in range(len(blankets)):
+#     if i == 0:
+#         combined_blanket = blankets[i]
+#     else:
+#         combined_blanket = combined_blanket.union(blankets[i])
+# # # combined_blanketをstlに出力
+# cq.exporters.export(combined_blanket, "combined_blanket_51.stl",    tolerance=5, angularTolerance=1 )
+# cq.exporters.export(combined_blanket, "combined_blanket_lowpoly.stl",    tolerance=5, angularTolerance=1 )
+# cq.exporters.export(combined_blanket, "combined_blanket_normal.stl",    tolerance=2.5, angularTolerance=0.5 )
+# cq.exporters.export(combined_blanket, "combined_blanket_fine.stl",    tolerance=1, angularTolerance=0.1 )

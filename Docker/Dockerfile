@@ -18,7 +18,10 @@ RUN if [ -n "$HTTP_PROXY" ]; then \
 # 開発に必要なツールをインストール
 RUN apt-get update && apt-get install -y \
     git \
-    python3-colcon-common-extensions \
+    python3-colcon-common-extensions\
+    && rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update && apt-get install -y \
     ros-jazzy-desktop-full \
     && rm -rf /var/lib/apt/lists/*
     

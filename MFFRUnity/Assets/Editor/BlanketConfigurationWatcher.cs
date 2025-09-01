@@ -24,12 +24,21 @@ public class BlanketConfigurationWatcher : AssetPostprocessor
             {
                 Debug.Log($"[BlanketConfigurationWatcher] Detected changes in: {assetPath}");
                 CheckAndUpdateBlanketConfiguration();
+
                 break;
+            }
+            // Mesh フォルダ以下の変更を検知した場合
+            if (assetPath.StartsWith(MESH_FOLDER_PATH, System.StringComparison.OrdinalIgnoreCase))
+            {
+                Debug.Log($"[BlanketConfigurationWatcher] Detected mesh change: {assetPath}");
+                CheckAndUpdateBlanketConfiguration();
+
+                return;
             }
         }
     }
     
-    private static void CheckAndUpdateBlanketConfiguration()
+    public static void CheckAndUpdateBlanketConfiguration()
     {
         if (!File.Exists(CONFIG_FILE_PATH))
         {
@@ -75,21 +84,22 @@ public class BlanketConfigurationWatcher : AssetPostprocessor
     
     private static void ProcessBlanketConfiguration(GameObject blanketEnvironment)
     {
+
         try
         {
             string jsonContent = File.ReadAllText(CONFIG_FILE_PATH);
             Debug.Log($"[BlanketConfigurationWatcher] Processing configuration file...");
-            
+
             BlanketConfigurationData configData = JsonUtility.FromJson<BlanketConfigurationData>(jsonContent);
-            
+
             if (configData?.items == null || configData.items.Length == 0)
             {
                 Debug.LogWarning("[BlanketConfigurationWatcher] No items found in configuration file");
                 return;
             }
-            
+
             Debug.Log($"[BlanketConfigurationWatcher] Found {configData.items.Length} items to process");
-            
+
             int successCount = 0;
             foreach (BlanketItem item in configData.items)
             {
@@ -98,7 +108,7 @@ public class BlanketConfigurationWatcher : AssetPostprocessor
                     successCount++;
                 }
             }
-            
+
             Debug.Log($"[BlanketConfigurationWatcher] Successfully created {successCount}/{configData.items.Length} objects");
         }
         catch (System.Exception e)
@@ -112,7 +122,7 @@ public class BlanketConfigurationWatcher : AssetPostprocessor
         try
         {
             string meshPath = MESH_FOLDER_PATH + item.mesh;
-            
+
             GameObject meshPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(meshPath);
             if (meshPrefab == null)
             {

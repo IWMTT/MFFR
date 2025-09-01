@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEditor;
 using System.Diagnostics;
 using System.IO;
 
@@ -54,6 +55,7 @@ public class ExternalTool : ScriptableObject
         {
             UnityEngine.Debug.LogError($"uv 実行中にエラー: {ex.Message}");
         }
+        AssetDatabase.Refresh();
     }
 
     /// <summary>

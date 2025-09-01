@@ -16,6 +16,9 @@
 *.blend1
 *.blend1.meta
 
+# Blanket Mesh files
+/[Aa]ssets/Torus/Mesh/
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/

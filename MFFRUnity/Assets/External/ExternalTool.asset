@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 846c7a2fa0db659479f74a280a91c38a, type: 3}
   m_Name: ExternalTool
   m_EditorClassIdentifier: 
-  uvExecutablePath: 
+  uvExecutablePath: uv
