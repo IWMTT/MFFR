@@ -239,7 +239,8 @@ public class BlanketToroidalDivisionControllerEditor : Editor
             ExternalTool tool = ScriptableObject.CreateInstance<ExternalTool>();
             tool.RunUV(scriptFile: "blanket_generation.py", directory: "../mcp_robot2/", arguments: "");
             AssetDatabase.StopAssetEditing();
-            AssetDatabase.Refresh();
+            AssetDatabase.Refresh(ImportAssetOptions.ForceUpdate);
+            // AssetDatabase.Refresh();
 
         }
 
