@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  ros2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: humble_ros2
+    environment:
+      - DISPLAY=$DISPLAY
+      - WAYLAND_DISPLAY=$WAYLAND_DISPLAY
+      - XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR
+      - PULSE_SERVER=$PULSE_SERVER
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /mnt/wslg:/mnt/wslg
+    network_mode: "host"
+    stdin_open: true
+    tty: true
