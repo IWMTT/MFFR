@@ -1,10 +1,11 @@
-version: "3.9"
+version: "20250929"
 services:
   ros2:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: humble_ros2
+    image: humble_ros2_image:latest
+    container_name: humble_ros2_container
     environment:
       - DISPLAY=$DISPLAY
       - WAYLAND_DISPLAY=$WAYLAND_DISPLAY

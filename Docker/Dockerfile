@@ -69,6 +69,7 @@ RUN id -u ubuntu 2>/dev/null || \
 
 # ${ROS_WS}以下すべてのディレクトリとファイル権限をubuntuユーザーに変更
 RUN chown -R ubuntu:ubuntu ${ROS_WS}
+RUN chown -R ubuntu:ubuntu ${USER_DIR}
 
 
 # 起動スクリプトをコピーして実行権限を付与
