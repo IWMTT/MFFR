@@ -32,8 +32,18 @@ WORKDIR ${WS}
 RUN curl -OL https://easyfea.readthedocs.io/en/latest/_downloads/aadfa90b122ddd054aa9b882abdea498/Elas7.zip
 RUN unzip Elas7.zip && rm Elas7.zip
 
-RUN chown -R jovyan:users ${WS}
+# PyVistaのJupyterバックエンドを設定
+RUN mkdir -p ${USER_DIR}/.ipython/profile_default/startup
+RUN mkdir -p ${USER_DIR}/.ipython/profile_default/startup && \
+    printf '%s\n%s\n%s\n' \
+      '# ~/.ipython/profile_default/startup/00-pyvista.py' \
+      'import pyvista as pv' \
+      "pv.set_jupyter_backend('html')" \
+    > ${USER_DIR}/.ipython/profile_default/startup/00-pyvista.py
 
+
+RUN chown -R jovyan:users ${WS}
+RUN chown -R jovyan:users ${USER_DIR}
 
 # # 起動スクリプトをコピーして実行権限を付与
 # COPY ./entrypoint.sh /
